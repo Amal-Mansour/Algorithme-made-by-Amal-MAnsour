@@ -1,0 +1,78 @@
+ALGORITHM counting string 
+VAR
+    set_declarations
+// step 1: declair the variables:
+
+ // declaire a variable type is  a string 
+     str :STRING :="";
+// declaire a variable to counte the number of words,vowels ;  
+   countWords ,countVowels :INTEGER := 0;
+// variable needs for  function 
+   countChara:={}
+   vowels :STRING :="aeiou";
+
+
+//  step 2 :look for the tools we need for that function :
+
+// we need to use the string tools :
+//    string.length
+//    string.split("")
+//    string.indexOf("value")
+//    FOR loop 
+
+BEGIN
+     set_instructions
+    //step 3 :  set_instructions of the function 
+// set the operation we need in each function
+// function to count the  length of the sentence (the number of characters).
+// we need to decalire Tow varaible inside the function to put on it the new output
+    Read let chars= str.split("")
+    Read  (countChara)
+    Read (str);
+// we use  tow for loop to ettirate inside the hole string and to check the letter one by one 
+         for(let i=0 ; i<chars.length ; i++)
+         if( countChara [chars[i]] == undefined)
+        countChara[chars[i]] = 0;
+        countChara[chars[i]]++;
+
+
+     for (let i in countChara)
+    Write  (console.log (i +" => "+countChara[i]));
+
+
+ // function to count the number of words in the sentence.
+ // we need to use the string tools "length" and "split".
+          Read (countWords)
+          Read (str)
+         countWords  = str.split(" ").length
+
+    Write(console.log(countWords))
+
+ // function to count  the number of vowels in the sentence.
+ // we need to declair tow  new variable to store on it the vowels and to count thhe numbre of vowels.
+ // we need to use the string tools "length" and "split" and for loop to ettirate inside the hole string and to check the letter one by one
+    Read  (vowels);
+    Read (countVowels)
+    Read (str)
+    for(let i=0 ; i<str.length ; i++)
+     if(vowels.indexOf(str[i]) >-1)
+      countVowels ++;
+
+    Write(console.log("this sentence has" + countVowels + "vowels in it"))
+END
+
+
+
+// Objective
+
+// We ask to read a sentence, which ends with a point, character by character and to determine:
+
+//     The length of the sentence (the number of characters).
+//     The number of words in the sentence (assuming that the words are separated by a single space).
+//     The number of vowels in the sentence.
+
+
+// Each character will be treated separately.
+// The last character is the.
+// Use three variables as counters.
+
