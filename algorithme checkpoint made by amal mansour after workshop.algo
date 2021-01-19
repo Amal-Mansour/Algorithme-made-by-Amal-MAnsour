@@ -1,0 +1,20 @@
+ALGORITHM algorithme count charactar
+VAR
+// step 1: declair the variables:
+    
+    chara:CHAR;
+    L:INTEGER;
+    countWo ,countVo :INTEGER := 0;
+    
+
+BEGIN
+//  step 2 :look for the tools we need for that function 
+REPEAT
+    Read(chara)
+     l=l+1;
+     IF((chara =" ") or (chara ="."))THEN
+      countWo ++;
+      ELSE IF(chara in ["a","o","e","u","i","y","A","O","E","U","I","Y"]) THEN
+       countVo ++;
+UNTIL (chara ".")
+END
